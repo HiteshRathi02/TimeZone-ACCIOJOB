@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timezone Finder</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container light">
+      <h2>TimeZone API</h2>
+      <h3>Your Current Time Zone</h3>
+      <div class="box" id="current-timezone">
+        <p>Name Of Time Zone : <span id="current-name"></span></p>
+        <div class="label">
+          <div>Lat: <span id="current-lat"></span></div>
+          <div>Long: <span id="current-lon"></span></div>
+        </div>
+        <p>Offset STD: <span id="current-offset-std"></span></p>
+        <p>Offset STD Seconds : <span id="current-offset-std-sec"></span></p>
+        <p>Offset DST : <span id="current-offset-dst"></span></p>
+        <p>Offset DST Seconds: <span id="current-offset-dst-sec"></span></p>
+        <p>Country: <span id="current-country"></span></p>
+        <p>Postcode: <span id="current-postcode"></span></p>
+        <p>City: <span id="current-city"></span></p>
+      </div>
+    </div>
+
+    <div class="container dark">
+      <h3>Enter Address</h3>
+      <input type="text" id="address" placeholder="e.g., New Delhi" />
+      <button onclick="getTimezoneFromAddress()">Search</button>
+      <div id="address-timezone-container">
+        <p style="color: red;">Please enter an address.</p>  
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
